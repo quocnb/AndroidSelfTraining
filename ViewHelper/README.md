@@ -42,3 +42,5 @@ editText.setOnClickListener {
     (it as EditText).isCursorVisible = true
 }
 ```
+
+- When keyboard show, and you tap to DOWN button (bottom BACK button). If you want to hide the cursor, using [this file](./EditText/CustomEditText.kt)
