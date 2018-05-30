@@ -43,25 +43,13 @@ open class RootActivity: AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
+        hideKeyboard(this.currentFocus)
         this.overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_right)
     }
 }
 ```
 
 ### Back to previous view
-In the `Manifest` file, add `parentActivityName` to activity.
-
-```
-<application>
-    <activity android:name=".First">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity android:name=".Second" android:parentActivityName=".First" />
-</application>
-```
 
 Show `Back button`
 ```
@@ -73,4 +61,4 @@ Show `Back button`
  supportActionBar?.setDisplayHomeAsUpEnabled(false)
 ```
 
-When tap to `Back button`, it will auto back to previous view (that you declare with `parentActivityName` tag)
+When tap to `Back button`, it will auto back to previous view

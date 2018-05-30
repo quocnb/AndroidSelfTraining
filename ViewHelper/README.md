@@ -14,7 +14,14 @@
 ```
 
 ### 3. EditText
-- Android manage cursor and keyboard discretely
+
+**Android manage cursor and keyboard discretely**
+
+- Turn off text suggestion /check spell (underline below text when typing)
+
+```
+android:inputType="textVisiblePassword"
+```
 - [Show/Hide keyboard (cursor too)](./EditText/EditTextUtil.kt)
 
 *If you want to auto show keyboard, don't forget to add `android:windowSoftInputMode="stateVisible"` to <activity> in Manifest file*
